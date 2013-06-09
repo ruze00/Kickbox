@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kickbox", "Kickbox\Kickbox.csproj", "{40144DF3-B87F-4329-953F-894B1082933F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kickbox.Web", "Kickbox.Web\Kickbox.Web.csproj", "{CFC857AC-61CE-40E5-8F2E-03FB52DC6A10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kickbox.Web.Tests", "Kickbox.Web.Tests\Kickbox.Web.Tests.csproj", "{5DF6C4FB-FA79-414A-8C04-85DA957E6BA8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ruze.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Kickbox\\Kickbox.csproj
+		SccProjectName1 = Kickbox
+		SccLocalPath1 = Kickbox
+		SccProjectUniqueName2 = Kickbox.Web\\Kickbox.Web.csproj
+		SccProjectName2 = Kickbox.Web
+		SccLocalPath2 = Kickbox.Web
+		SccProjectUniqueName3 = Kickbox.Web.Tests\\Kickbox.Web.Tests.csproj
+		SccProjectName3 = Kickbox.Web.Tests
+		SccLocalPath3 = Kickbox.Web.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40144DF3-B87F-4329-953F-894B1082933F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40144DF3-B87F-4329-953F-894B1082933F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40144DF3-B87F-4329-953F-894B1082933F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40144DF3-B87F-4329-953F-894B1082933F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC857AC-61CE-40E5-8F2E-03FB52DC6A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC857AC-61CE-40E5-8F2E-03FB52DC6A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC857AC-61CE-40E5-8F2E-03FB52DC6A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC857AC-61CE-40E5-8F2E-03FB52DC6A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF6C4FB-FA79-414A-8C04-85DA957E6BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF6C4FB-FA79-414A-8C04-85DA957E6BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF6C4FB-FA79-414A-8C04-85DA957E6BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF6C4FB-FA79-414A-8C04-85DA957E6BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

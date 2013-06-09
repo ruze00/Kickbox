@@ -1,0 +1,28 @@
+﻿@model Kickbox.Web.Models.DemoVM
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@section scripts
+{
+<script>
+    @Ajax.MapModelToKnockout()
+    @Ajax.EnableRefresh("refresh", "GetData")
+    @Ajax.EnableSubmit("form", "SaveData")
+</script>
+}
+
+<p>Display Model</p>
+@Html.DisplayFor(m=>m)
+<input type="button" id="refresh" value="Refresh"/>
+
+<div>
+    <p>Form Submit</p>
+    @using(Ajax.BeginForm(null, null))
+    {
+        @Html.EditorFor(m => m)
+        <input type="submit" value="Save"/>
+    }
+</div>

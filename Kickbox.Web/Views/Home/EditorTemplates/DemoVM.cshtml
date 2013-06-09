@@ -1,0 +1,34 @@
+﻿@model Kickbox.Web.Models.DemoVM
+<div>
+    @Html.LabelFor(m => m.Text)
+    <br/>
+    @Ajax.TextBoxFor(m => m.Text)
+    <br/>
+    <br/>
+    @Html.LabelFor(m => m.Check)
+    <br/>
+    @Ajax.CheckBoxFor(m=>m.Check)
+    <br/>
+    <br/>
+    @Html.LabelFor(m => m.Hidden)
+    <br/>
+    @Ajax.HiddenFor(m=>m.Hidden)
+    <br/>
+    <br/>
+    @Html.LabelFor(m => m.Password)
+    <br/>
+    @Ajax.PasswordFor(m=>m.Password)
+    <br/>
+    <br/>
+    @Html.LabelFor(m => m.RadioButton)
+    <br/>
+    Chris: @Ajax.RadioButtonFor(m => m.RadioButtonFor, "Chris")
+    <br/>
+    Ruze: @Ajax.RadioButtonFor(m => m.RadioButtonFor, "Ruze")
+    <br/>
+    Ali: @Ajax.RadioButtonFor(m => m.RadioButtonFor, "Ali")
+    <br/>
+    <br/>
+    @Html.LabelFor(m => m.DropDownSelected)
+    @Ajax.DropDownListFor(m=>m.DropDownSelected, Model.DropDownListOptions)
+</div>

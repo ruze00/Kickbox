@@ -1,0 +1,118 @@
+﻿@model Kickbox.Web.Models.DemoVM
+<div>
+    <p>Ajax.Display-Default</p>
+    @Ajax.Display(Model.Text)
+    <p>Ajax.Display-p</p>
+    @Ajax.Display(Model.Text,wrapperTag:  "p")
+    <p>Ajax.Display-div</p>
+    @Ajax.Display(Model.Text,wrapperTag: "div")
+    <p>Ajax.DisplayFor-Default</p>
+    @Ajax.DisplayFor(m => m.Text)
+    <p>Ajax.DisplayFor-p</p>
+    @Ajax.DisplayFor(m => m.Text, wrapperTag: "p")
+    <p>Ajax.DisplayFor-div</p>
+    @Ajax.DisplayFor(m => m.Text, wrapperTag: "div")
+    <p>Ajax.DisplayText-Default</p>
+    @Ajax.DisplayText(Model.Text)
+    <p>Ajax.DisplayText-p</p>
+    @Ajax.DisplayText(Model.Text,wrapperTag: "p")
+    <p>Ajax.DisplayText-div</p>
+    @Ajax.DisplayText(Model.Text, wrapperTag: "div")
+</div>
+<hr />
+<div>
+  
+    <p>Ajax.TextBox:</p>
+    @Ajax.TextBox("Text")
+    @Ajax.DisplayFor(m => m.Text)
+    <p>Ajax.TextBoxFor</p>
+    @Ajax.TextBoxFor(m => m.Text)
+    @Ajax.DisplayFor(m => m.Text)
+</div>
+
+<hr/>
+
+<div>
+    <p>Ajax.CheckBox:</p>
+    @Ajax.CheckBox("Check")
+    @Ajax.DisplayFor(m => m.Check)
+    <p>Ajax.CheckBoxFor:</p>
+    @Ajax.CheckBoxFor(m => m.Check)
+    @Ajax.DisplayFor(m => m.Check)
+</div>
+
+<hr/>
+
+<div>
+    <strong>You can verify hiddens have correct values by using dev tools in browser</strong>
+    <p>Ajax.Hidden (bound to textbox):</p>
+    @Ajax.TextBoxFor(m => m.Hidden)
+    @Ajax.Hidden("Hidden")
+    @Ajax.DisplayFor(m => m.Hidden)
+
+    <p>Ajax.HiddenFor:</p>
+    @Ajax.HiddenFor(m => m.Hidden)
+    @Ajax.DisplayFor(m => m.Hidden)
+</div>
+
+<hr/>
+
+<div>
+    <p>Ajax.Password:</p>
+    @Ajax.Password("Password")
+    @Ajax.DisplayFor(m => m.Password)
+
+    <p>Ajax.PasswordFor:</p>
+    @Ajax.PasswordFor(m => m.Password)
+    @Ajax.DisplayFor(m => m.Password)
+</div>
+
+<hr/>
+
+<div>
+    <p>Ajax.RadioButton:</p>
+    Chris: @Ajax.RadioButton("RadioButton", "Chris")
+    Ruze: @Ajax.RadioButton("RadioButton", "Ruze")
+    Ali: @Ajax.RadioButton("RadioButton", "Ali")
+    @Ajax.DisplayFor(m => m.RadioButton)
+    <p>Ajax.RadioButtonFor:</p>
+    Chris: @Ajax.RadioButtonFor(m => m.RadioButtonFor, "Chris")
+    Ruze: @Ajax.RadioButtonFor(m => m.RadioButtonFor, "Ruze")
+    Ali: @Ajax.RadioButtonFor(m => m.RadioButtonFor, "Ali")
+    @Ajax.DisplayFor(m => m.RadioButtonFor)
+</div>
+
+<hr/>
+<div>
+    <p>Ajax.DropDownList:</p>
+    @Ajax.DropDownList("DropDownSelected", Model.DropDownListOptions)
+    @Ajax.DisplayFor(m => m.DropDownSelected)
+</div>
+
+<div>
+
+    <p>Ajax.DropDownListFor:</p>
+    @Ajax.DropDownListFor(m => m.DropDownSelected, Model.DropDownListOptions)
+    @Ajax.DisplayFor(m => m.DropDownSelected)
+</div>
+
+<div>
+    <p>Ajax.Listbox:</p>
+    @Ajax.ListBox("DropDownSelected", Model.DropDownListOptions, new {Multiple = "multiple"}.ToString())
+    @Ajax.DisplayFor(m => m.DropDownSelected)
+
+</div>
+
+<div>
+    <p>Ajax.ListboxFor:</p>
+    @Ajax.ListBoxFor(m => m.DropDownSelected, Model.DropDownListOptions, new {Multiple = "multiple"}.ToString())
+    @Ajax.DisplayFor(m => m.DropDownSelected)
+
+</div>
+<div>
+    <p>Ajax.ListboxFor IEnumerable</p>
+    @Ajax.ListBoxFor(x => x.ListBoxSelected, Model.DropDownListOptions) 
+    @Ajax.DisplayFor(m => m.ListBoxSelected)
+    
+</div>
+<hr/>
