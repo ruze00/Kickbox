@@ -38,6 +38,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -75,6 +78,7 @@
     <Compile Include="AjaxHelperExtensions.cs" />
     <Compile Include="AjaxHelper\Display.cs" />
     <Compile Include="AjaxHelper\Input.cs" />
+    <Compile Include="JsonHelper\ToJson.cs" />
     <Compile Include="Kickbox\KoMapping.cs" />
     <Compile Include="AjaxHelper\Select.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

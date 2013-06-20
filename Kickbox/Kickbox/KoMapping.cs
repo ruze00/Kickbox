@@ -3,6 +3,8 @@ using System.Reflection;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using Kickbox.JsonHelper;
+using Newtonsoft.Json;
 
 namespace Microsoft.Web.Mvc.Html
 {
@@ -18,36 +20,7 @@ namespace Microsoft.Web.Mvc.Html
 
             var sb = new StringBuilder();
             sb.AppendLine();
-            sb.AppendLine("function " + name + "() {");
-            PropertyInfo[] props = type.GetProperties();
-            foreach (PropertyInfo prop in props)
-            {
-                object value = prop.GetValue(model);
-                if (value != null && prop.PropertyType.Name == "String")
-                {
-                    value = "\"" + value + "\"";
-                }
-                else if (value != null && prop.PropertyType.Name == "Boolean")
-                {
-                    value = value.ToString().ToLower();
-                }
-                    // TODO: Arrays, Collections, Generics
-                else if (value != null && (prop.PropertyType.IsArray || prop.PropertyType.IsConstructedGenericType))
-                {
-                    // deal with collection
-                    sb.AppendLine("\tthis." + prop.Name + " = ko.observableArray();");
-/*
-                    foreach (var item in value as IEnumerable)
-                    {
-                        sb.AppendLine("\tthis." + prop.Name + " = ko.observableArray(" + value + ");");
-                    }
-*/
-                    continue;
-                }
-                sb.AppendLine("\tthis." + prop.Name + " = ko.observable(" + value + ");");
-            }
-            sb.AppendLine("};");
-            sb.AppendLine("window.vm=new " + name + "();");
+            sb.AppendLine("window.vm = ko.mapping.fromJS(" + ajaxHelper.GetHtmlHelper().Raw(model.ToJson()) + ");");
             sb.AppendLine("ko.applyBindings(window.vm);");
 
             return MvcHtmlString.Create(sb.ToString());
